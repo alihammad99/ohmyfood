@@ -1,0 +1,210 @@
+@import "animation";
+
+
+.plate_container {
+        
+    .card {
+        width: 100%;
+        height: 70px;
+        border-radius: 15px;
+        background-color: #fff;
+        opacity: 1;
+        color: #000;
+        position: relative;
+        margin-top: 15px;
+        padding: 15px;
+        overflow: hidden;
+        transition: opacity 0.5 linear;
+        visibility: hidden;
+
+        @for $i from 1 through 9 { 
+            // :nth-child(1-9) 
+            &:nth-child(#{$i}) {
+              
+              // Delay the animation. Delay increases as items loop.
+              animation-delay: $i / 6 +s;
+              animation-fill-mode: forwards;
+            }
+        }
+
+        @include keyframes(card){
+
+            0%{
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            100%{
+                opacity: 1;
+                visibility: visible;
+            }
+
+                
+
+        }
+
+        
+
+        // transition: opacity 2s ease-in;
+        
+
+        @include animate(card, .6s, linear, 1) {
+            // animation-delay: 1s;
+        };
+
+        
+
+
+        @include shadow;
+
+        @include tablet {
+            height: 80px;
+        }
+
+        @include desktop {
+            height: 90px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &_details {
+            display: flex;
+            justify-content: space-between;    
+            align-items: flex-end;
+
+            @include tablet {
+                font-size: 20px;
+            }
+
+            @include desktop {
+                font-size: 22px;
+            }
+
+            .info {
+                margin-top: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .price {
+                font-weight: $regular;
+                margin-right: 0;
+                transition: margin .5s ease-in;
+            }
+        }
+
+        &_title { 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 0;
+            transition: margin .5s ease-in;
+
+            @include tablet {
+                font-size: 22px;
+            }
+
+            @include desktop {
+                font-size: 24px;
+            }
+        }
+
+        .check {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background-color: $tertiary;
+            border-radius: 0 15px 15px 0;
+            border: 0;
+            margin-left: 20px;
+            transition: width .5s ease-in;
+
+
+            i {
+                color: #fff;
+                font-size: 25px;
+            }
+        }
+
+        // transition: all 1s ease-in;
+
+        &:hover > .card_title {
+
+            @include keyframes(title){
+
+                0%{
+                    margin-right: 0;
+                }
+
+                100%{
+                    margin-right: 65px;
+                }
+            }
+
+            transition:all 1s ease-in;
+            margin-right: 65px;
+            @include animate(title, .5s, ease-out, 1);
+
+        }
+
+        &:hover > .card_details .price {
+            margin-right: 62px;
+
+            @include keyframes(price){
+                0%{
+                    margin-right: 0;
+                }
+
+                100%{
+                    margin-right: 62px;
+                }
+            }
+            @include animate(price, .5s, ease-out, 1);
+
+            transition:all 1s ease-in;
+        }
+
+        &:hover > .check {
+
+            @include keyframes(checkBox){
+                0%{
+                    width: 0;
+                }
+
+                100%{
+                     width: 65px;
+                }
+            }
+            @include animate(checkBox, .5s, ease-out, 1);
+
+            cursor: pointer;
+            width: 65px;
+        }
+        &:hover > .check i {
+
+            @include keyframes(checkIcon){
+
+                0%{
+                    transform: rotate(360deg);
+                }
+
+                100%{
+                    transform: rotate(0);
+                }
+            }
+
+            @include animate(checkIcon, .5s, ease-out, 1);
+
+        }
+
+        
+
+        
+    }
+}

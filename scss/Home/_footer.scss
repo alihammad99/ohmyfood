@@ -1,0 +1,49 @@
+@import "variables";
+
+.footer {
+    color: #fff;
+    padding: 40px 30px;
+    background-color: $dark_gray;
+    font-size: 26px;
+    display: flex;
+    flex-flow: column nowrap;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 50px 0 40px 0;
+    }
+
+    h5 {
+        font-weight: $thin;
+        cursor: pointer;
+        
+        &:hover {
+            font-weight: $regular;
+        }
+    }
+
+    i {
+        font-size:20px;
+    }
+
+    gap: 5px;
+    img {
+        width: 150px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    &_content {
+        display:flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px;
+
+        .suggest {
+            margin-left: 10px;
+        }
+    }
+}
