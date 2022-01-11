@@ -41,8 +41,14 @@ $medium: 900;
 h2, h3 {
     font-size: 24px;
     font-weight: $regular;
+
+    @include desktop {
+        font-size: 34px;
+        font-weight: $regular;
+    }
 }
 
 p {
     font-weight: $thin;
 }
+
