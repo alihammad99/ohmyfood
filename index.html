@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Home/style.css">
+    <link rel="stylesheet" href="css/Home/home.css">
     <script src="https://kit.fontawesome.com/545f90b789.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
@@ -12,10 +12,10 @@
     <header>
         <!-- logo -->
         <nav>
-            <a href="/"><img src="./assets/logo.svg" alt="ohmyfood logo"></a>
-            <div class="location" tabindex="0">
+            <a href="/" class="logo"><img src="./assets/logo.svg" alt="ohmyfood logo"></a>
+            <div class="location">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>Paris, Belleville</p>
+                <a class="location_text" href="#">Paris, Belleville</a>
             </div>
         </nav>
         <!-- location -->
@@ -26,46 +26,46 @@
 
         <!-- Hero -->
         <div class="hero">
-            <h1 tabindex="0">Book the menu you like</h1>
-            <p tabindex="0">Discover top-of-the-art restaurants we picked for you</p>
-            <button tabindex="0" type="button">Explore our restaurants</button>
+            <h1>Book the menu you like</h1>
+            <p>Discover top-of-the-art restaurants we picked for you</p>
+            <button type="button">Explore our restaurants</button>
         </div>
     </header>
 
     <!-- How it works -->
     <section class="how-it-works">
-        <h2 tabindex="0">How it works</h2>
+        <h2 class="title">How it works</h2>
 
         <div class="how-it-works_container">
-            <div class="container">
-                <div class="container_num">
+            <div class="how-it-works_container_box">
+                <div class="how-it-works_container_box_num">
                     <div class="num">1</div>
                 </div>
                 <i class="fas fa-mobile-alt"></i>
-                <h4 tabindex="0">Chose a restaurant</h4>
+                <h4 >Chose a restaurant</h4>
             </div>
     
-            <div class="container">
-                <div class="container_num">
+            <div class="how-it-works_container_box">
+                <div class="how-it-works_container_box_num">
                     <div class="num">2</div>
                 </div>
                 <i class="fas fa-list-ul"></i>
-                <h4 tabindex="0">Create your menu</h4>
+                <h4>Create your menu</h4>
             </div>
     
-            <div class="container">
-                <div class="container_num">
+            <div class="how-it-works_container_box">
+                <div class="how-it-works_container_box_num">
                     <div class="num">3</div>
                 </div>
                 <i class="fas fa-store"></i>
-                <h4 tabindex="0">Go enjoy it at the restaurant</h4>
+                <h4>Go enjoy it at the restaurant</h4>
             </div>
         </div>
     </section>
 
     <!-- Restaurants -->
     <section class="restaurants">
-        <h2>Restaurants</h2>
+        <h2 class="title">Restaurants</h2>
         <div class="restaurants_container">
             <div class="meal" id="The-Full-Palette">
                 <div class="meal_image_container">
@@ -77,11 +77,11 @@
                 <div class="content">
                     <div class="content_text">
                         <a href="/menu/The-Full-Palette.html">
-                            <h3>The Full Palette</h3>
-                            <p>New York</p>
+                            <h3 class="content_text_title">The Full Palette</h3>
+                            <p class="content_text_info">New York</p>
                         </a>
                     </div>
-                    <div class="favorite" tabindex="0">
+                    <div class="favorite">
                         <i id="fav_icon" class="far fa-heart"></i>
                     </div>
                 </div>
@@ -97,11 +97,11 @@
                 <div class="content">
                     <div class="content_text">
                         <a href="/menu/The-Enchanted-Plate.html">
-                            <h3>The Enchanted Plate</h3>
-                            <p>New York</p>
+                            <h3 class="content_text_title">The Enchanted Plate</h3>
+                            <p class="content_text_info">New York</p>
                         </a>
                     </div>
-                    <div class="favorite" tabindex="0">
+                    <div class="favorite">
                         <i id="fav_icon" class="far fa-heart"></i>
                     </div>
                 </div>
@@ -109,17 +109,16 @@
 
             <div class="meal" id="Bastille">
                 <div class="meal_image_container">
-                    <div class="new">New</div>
                     <a href="/menu/Bastille.html">
                         <img src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Batille Photo">
                     </a>
                 </div>
                 <div class="content" id="Bastille">
                     <a href="/menu/Bastille.html" class="content_text">
-                        <h3>Bastille</h3>
-                        <p>New York</p>
+                        <h3 class="content_text_title">Bastille</h3>
+                        <p class="content_text_info">New York</p>
                     </a href="/menu/Bastille.html">
-                    <div href="#" class="favorite" tabindex="0">
+                    <div href="#" class="favorite">
                         <i id="fav_icon" class="far fa-heart"></i>
                     </div>
                 </div>
@@ -127,7 +126,6 @@
 
             <div class="meal" id="Le-Gourmand">
                 <div class="meal_image_container">
-                    <div class="new">New</div>
                     <a href="/menu/Le-Gourmand.html">
                         <img src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le Gourmand">
                     </a>
@@ -135,11 +133,11 @@
                 <div class="content">
                     <div class="content_text">
                         <a href="/menu/Le-Gourmand.html">
-                            <h3>Le Gourmand</h3>
-                            <p>New York</p>
+                            <h3 class="content_text_title">Le Gourmand</h3>
+                            <p class="content_text_info">New York</p>
                         </a>
                     </div>
-                    <div class="favorite" tabindex="0">
+                    <div class="favorite">
                         <i id="fav_icon" class="far fa-heart"></i>
                     </div>
                 </div>
@@ -152,21 +150,21 @@
     <!-- Footer -->
     <footer class="footer">
 
-            <img src="./assets/logo_w.svg" class="logo-white" alt="logo">
-            <div class="footer_content">
-                <i class="fas fa-utensils"></i>
-                <h5 class="suggest" tabindex="0">Suggest a restaurant</h5>
-            </div>
-            <div class="footer_content">
-                <i class="fas fa-handshake"></i>
-                <h5 tabindex="0">Become a partner</h5>
-            </div>
-            <div>
-                <h5 tabindex="0">Legal</h5>
-            </div>
-            <div>
-                <h5 tabindex="0">Contact</h5>
-            </div>
+        <img src="./assets/logo_w.svg" class="logo-white" alt="logo">
+        <div class="footer_content">
+            <i class="fas fa-utensils"></i>
+            <a href="#" class="footer_content_link suggest">Suggest a restaurant</a>
+        </div>
+        <div class="footer_content">
+            <i class="fas fa-handshake"></i>
+            <a href="#" class="footer_content_link become_a_partner">Become a partner</a>
+        </div>
+        <div>
+            <a href="#" class="footer_content_link">Legal</a>
+        </div>
+        <div>
+            <a href="#" class="footer_content_link">Contact</a>
+        </div>
 
     </footer>
 </body>

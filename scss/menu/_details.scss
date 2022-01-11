@@ -66,7 +66,7 @@
             margin-bottom: 25px;
         }
 
-        h2 {
+        &_text {
             font-family: $title;
 
             @include tablet {
@@ -166,13 +166,14 @@
                         background-color: #99E2D0;
                         position: absolute;
                         width: 40px;
-                        bottom: -10px;
+                        bottom: -7px;
                         border-radius: 5px;
                         top: 23px;
 
                         @include tablet {
                             top: 27px;
                             width: 50px;
+                            bottom: -10px;
                         }
 
                         @include desktop {
