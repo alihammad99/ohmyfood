@@ -1,170 +1,164 @@
-
 .restaurants {
-    background-color: $light_gray;
-    width: 100%;
-    padding: 30px 20px;
+  background-color: $light_gray;
+  width: 100%;
+  padding: 30px 20px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @include tablet {
+    padding: 60px 20px;
     padding-bottom: 70px;
+  }
+
+  .title {
+    margin-bottom: -20px;
+    @include desktop {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &_container {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
+    flex-flow: column nowrap;
+    gap: 30px;
+    width: 100%;
+
     @include tablet {
-        padding: 60px 20px;
-        padding-bottom: 70px;
+      flex-flow: row wrap;
+    }
+    @include desktop {
+      flex-flow: row wrap;
+      margin: 0;
+      gap: 50px;
+      justify-content: center;
     }
 
-    
-    .title {
-        margin-bottom: -20px;
-        @include desktop {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    }
-    &_container {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 30px;
+    .meal {
+      height: 300px;
+      width: 100%;
+      border-radius: 25px;
+      margin: 0 auto;
+      transition: all 0.2s ease-out;
+      @include shadow;
+
+      @include tablet {
+        width: 47%;
+        height: 350px;
+      }
+      @include desktop {
+        min-width: 200px;
+        max-width: 650px;
+        height: 460px;
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: lighten($primary_color, 35);
+      }
+
+      &_image_container {
+        position: relative;
+        height: 210px;
         width: 100%;
 
         @include tablet {
-            flex-flow: row wrap;
+          height: 260px;
         }
         @include desktop {
-            flex-flow: row wrap;
-            margin: 0;
-            gap: 50px;
-            justify-content: center;
+          height: 340px;
         }
 
-        .meal {
-            height: 300px;
-            width: 100%;
-            border-radius: 25px;
-            margin: 0 auto;
-            transition: all .2s ease-out;
-            @include shadow;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 25px 25px 0 0;
+        }
 
-            @include tablet {
-                width: 47%;
-                height: 350px;
-            }
+        .new {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          padding: 8px 30px;
+          color: darken($tertiary, 35);
+          background-color: $tertiary;
+          border-radius: 3px;
+          font-size: 16px;
+          font-weight: $regular;
+          @include shadow;
+          transition: background-color 0.06s ease;
+
+          @include desktop {
+            font-size: 26px;
+            padding: 10px 40px;
+          }
+          &:hover {
+            background-color: lighten($tertiary, 1.5);
+            transition: background-color 0.1s ease;
+          }
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+          font-size: 30px;
+          background-clip: text;
+          color: #000;
+          background: $gradient;
+          font-weight: 400;
+          transition: all 0.1s ease-out;
+          -webkit-background-clip: text;
+          &:hover {
+            color: transparent;
+            font-weight: 900;
+            color: transparent;
+            transition: all 0.3s ease-out;
+          }
+          @include desktop {
+            font-size: 40px;
+          }
+          &:active {
+            font-size: 36px;
+            margin-right: -3px;
+            color: $secondary_color;
+            transition: all 0.01s ease-out;
             @include desktop {
-                min-width: 200px;
-                max-width: 650px;
-                height: 460px;
-                margin: 0;
+              font-size: 46px;
             }
-    
-            &:hover {
-                background-color: lighten($primary_color, 35);
-            }
-    
-            &_image_container {
-                position: relative;
-                height: 210px;
-                width: 100%;
-
-                @include tablet {
-                    height: 260px;
-                }
-                @include desktop {
-                    height: 340px;
-                }
-    
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: 25px 25px 0 0;
-                }
-    
-                .new {
-                    position: absolute;
-                    top: 20px;
-                    right: 20px;
-                    padding: 8px 30px;
-                    color: darken($tertiary, 35);
-                    background-color: $tertiary;
-                    border-radius: 3px;
-                    font-size: 16px;
-                    font-weight: $regular;
-                    @include shadow;
-                    transition: background-color .06s ease;
-
-                    @include desktop {
-                        font-size: 26px;
-                        padding: 10px 40px;
-
-                    }
-                    &:hover {
-                        background-color: lighten($tertiary, 1.5);
-                        transition: background-color .1s ease;
-                    }
-                }
-            }
-            .content {
-                display: flex;
-                flex-direction: row;
-                margin: 20px;
-                align-items: center;
-                justify-content: space-between;
-    
-                i {
-                    font-size: 30px;
-                    background-clip: text;
-                    color: #000;
-                    background: $gradient;
-                    font-weight: 400;
-                    transition: all 0.1s ease-out;
-                    -webkit-background-clip: text;
-                    &:hover {
-                        color: transparent;
-                        font-weight: 900;
-                        color: transparent;
-                        transition: all .3s ease-out;
-                    }
-                    @include desktop {
-                        font-size: 40px;
-                    }
-                    &:active {
-                        font-size: 36px;
-                        margin-right: -3px;
-                        color: $secondary_color;
-                        transition: all .01s ease-out;
-                        @include desktop {
-                            font-size: 46px;
-                        }
-                    }
-                }
-    
-                &_text {
-    
-                    &_title {
-                        font-size: 21px;
-                        font-weight: $regular;
-                        @include desktop {
-                            font-size: 28px;
-                        }
-                    }
-                    &_info {
-                        font-size: 20px;
-                        margin-top: 4px;
-                        font-weight: $thin;
-                        @include desktop {
-                            font-size: 26px;
-                            margin-top: 10px;
-                        }
-                    }
-                }
-            }
-    
-            &:hover {
-                cursor: pointer;
-                @include dark_shadow;
-                transition: all .2s ease-in-out;
-    
-            }
+          }
         }
+
+        &_text {
+          &_title {
+            font-size: 21px;
+            font-weight: $regular;
+            @include desktop {
+              font-size: 28px;
+            }
+          }
+          &_info {
+            font-size: 20px;
+            margin-top: 4px;
+            font-weight: $thin;
+            @include desktop {
+              font-size: 26px;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        @include dark_shadow;
+        transition: all 0.2s ease-in-out;
+      }
     }
-    
+  }
 }

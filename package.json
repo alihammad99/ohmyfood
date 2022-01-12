@@ -10,8 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node-sass -o css scss",
-    "release": "standard-version"
+    "start": "node-sass -o css scss"
   },
   "repository": {
     "type": "git",

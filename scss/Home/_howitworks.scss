@@ -1,118 +1,113 @@
 .how-it-works {
-        background-color: #fff;
-        margin: 10px auto;
-        padding: 35px;
-        
-        .title {
-            margin-left: -15px;
-            @include tablet {
-                text-align: center;
-                margin: 30px;
-            }
-            @include desktop {
-                text-align: center;
-                margin: 50px;
-            }
-        }
+  background-color: #fff;
+  margin: 10px auto;
+  padding: 35px;
 
-        &_container {
-
-            display: flex;
-            flex-direction: column;
-            @include tablet {
-                justify-content: center;
-                flex-flow: row wrap;
-            }
-            @include desktop {
-                justify-content: center;
-                flex-flow: row wrap;
-            }
-            &_box {
-                margin: 20px 0;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                height: 70px;
-                background-color: $light_gray;
-                border-radius: 15px;
-                padding: 10px;
-                position: relative;
-                @include shadow;
-                transition: all .1s ease-out;
-                @include tablet {
-                    width: 335px;
-                    height: 80px;
-                    margin: 25px;
-                }
-                @include desktop {
-                    width: 500px;
-                    height: 80px;
-                    margin: 25px;
-                }
-    
-    
-    
-                &:hover {
-                    background-color: lighten($primary_color, 35);
-                    cursor: pointer;
-                    i {
-                        color: #903ffb;
-                    }
-                    transition: all .1s ease-in-out;
-                }
-                &:active {
-                    background-color: lighten($primary_color, 34);
-                }
-                i {
-                    color: gray;
-                    margin: 15px 20px;
-                    font-size: 25px;
-                    @include desktop {
-                        font-size: 30px;
-                    }
-    
-                }
-                &_num {
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                        top: 50%;
-                        left: 0;
-                        transform: translate(-50%, -50%);
-                    border-radius: 50%;
-                    background-color: #903ffb;
-    
-                    .num { 
-                        color: #fff;
-                        font-size: 12px;
-                        font-weight: $regular;
-                        margin: 8px 11px;
-
-                        @include tablet {
-                            font-size: 14px;
-                            margin: 7px 10px;
-                        }
-                        @include desktop {
-                            font-size: 16px;
-                            margin: 5px 10px;
-                        }
-                    }
-                }
-                
-                h4 {
-                    margin-top: 16px;
-                    font-weight: $regular;
-                    font-size: 16px;
-    
-                    @include tablet {
-                        font-size: 18px;
-                    }
-
-                    @include desktop {
-                        font-size: 26px;
-                    }
-                }
-            }
-        }
-        
+  .title {
+    margin-left: -15px;
+    @include tablet {
+      text-align: center;
+      margin: 30px;
     }
+    @include desktop {
+      text-align: center;
+      margin: 50px;
+    }
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      justify-content: center;
+      flex-flow: row wrap;
+    }
+    @include desktop {
+      justify-content: center;
+      flex-flow: row wrap;
+    }
+    &_box {
+      margin: 20px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: 70px;
+      background-color: $light_gray;
+      border-radius: 15px;
+      padding: 10px;
+      position: relative;
+      @include shadow;
+      transition: all 0.1s ease-out;
+      @include tablet {
+        width: 335px;
+        height: 80px;
+        margin: 25px;
+      }
+      @include desktop {
+        width: 500px;
+        height: 80px;
+        margin: 25px;
+      }
+
+      &:hover {
+        background-color: lighten($primary_color, 35);
+        cursor: pointer;
+        i {
+          color: #903ffb;
+        }
+        transition: all 0.1s ease-in-out;
+      }
+      &:active {
+        background-color: lighten($primary_color, 34);
+      }
+      i {
+        color: gray;
+        margin: 15px 20px;
+        font-size: 25px;
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+      &_num {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #903ffb;
+
+        .num {
+          color: #fff;
+          font-size: 12px;
+          font-weight: $regular;
+          margin: 8px 11px;
+
+          @include tablet {
+            font-size: 14px;
+            margin: 7px 10px;
+          }
+          @include desktop {
+            font-size: 16px;
+            margin: 5px 10px;
+          }
+        }
+      }
+
+      h4 {
+        margin-top: 16px;
+        font-weight: $regular;
+        font-size: 16px;
+
+        @include tablet {
+          font-size: 18px;
+        }
+
+        @include desktop {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
