@@ -10,7 +10,7 @@ nav {
   @include shadow;
 
   @include desktop {
-    padding: 10px 25px;
+    padding: 25px;
   }
 
   .logo {
@@ -35,7 +35,7 @@ nav {
       display: none;
     }
   }
-  .location {
+  .location--top {
     display: none;
     background: none;
     max-width: 300px;
@@ -56,28 +56,30 @@ nav {
     &:hover {
       cursor: pointer;
     }
-
-    &_text {
-      font-weight: $thin;
-    }
   }
 }
 
-.location {
+.location--bottom {
   display: flex;
-  margin: 0 auto;
   flex-flow: row nowrap;
   align-items: flex-start;
   position: relative;
   top: 78px;
   justify-content: center;
-  font-weight: $regular;
   font-size: 20px;
-  background-color: $gray;
   padding: 20px 0;
-  gap: 10px;
-  color: $dark_gray;
   @include desktop {
     display: none;
+  }
+}
+
+.location {
+  margin: 0 auto;
+  font-weight: $thin;
+  background-color: $gray;
+  gap: 10px;
+  color: $dark_gray;
+  &__text {
+    font-weight: $thin;
   }
 }
